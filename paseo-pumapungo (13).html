@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paseo Museo Pumapungo — Aula Cayambe</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Roboto", sans-serif;
+      background: #f5f4f0;
+      color: #1a1a18;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem 4rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 0.5px solid #e0dfd8;
+      width: 100%;
+      max-width: 520px;
+      overflow: hidden;
+    }
+    .header { padding: 1.5rem 1.5rem 1.25rem; border-bottom: 0.5px solid #e0dfd8; }
+    .trip-title { font-size: 20px; font-weight: 600; color: #1a1a18; line-height: 1.2; }
+    .salon-tag {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      padding: 2px 10px; border-radius: 999px;
+      background: #e1f5ee; color: #0f6e56; margin-top: 5px;
+    }
+    .trip-sub { font-size: 13px; color: #888780; margin-top: 4px; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 1.25rem 1.5rem; }
+    .stat-card { background: #f5f4f0; border-radius: 8px; padding: 12px 10px; text-align: center; }
+    .stat-label { font-size: 11px; color: #888780; margin-bottom: 4px; }
+    .stat-value { font-size: 22px; font-weight: 600; color: #1a1a18; }
+    .stat-value.green { color: #1d9e75; }
+    .stat-value.red { color: #d85a30; }
+    .progress-wrap { padding: 0 1.5rem 1.25rem; }
+    .progress-bar { height: 6px; background: #e0dfd8; border-radius: 999px; overflow: hidden; }
+    .progress-fill { height: 100%; background: #1d9e75; border-radius: 999px; transition: width 0.7s ease; width: 0%; }
+    .progress-label { font-size: 11px; color: #888780; margin-top: 5px; text-align: right; }
+    .controls { padding: 0 1.5rem 1rem; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .controls input {
+      flex: 1; min-width: 140px; font-size: 13px; padding: 7px 12px;
+      border: 0.5px solid #c8c7c0; border-radius: 8px; background: #fff; color: #1a1a18; outline: none;
+    }
+    .controls input:focus { border-color: #888780; }
+    .filter-btn {
+      font-size: 12px; padding: 5px 13px; border-radius: 999px;
+      border: 0.5px solid #c8c7c0; background: transparent; color: #888780; cursor: pointer;
+    }
+    .filter-btn.active { background: #1a1a18; color: #fff; border-color: #1a1a18; }
+    .list { padding: 0 1.5rem 1.5rem; }
+    .student-row { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 0.5px solid #e0dfd8; }
+    .student-row:last-child { border-bottom: none; }
+    .avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+    .avatar.paid { background: #e1f5ee; color: #0f6e56; }
+    .avatar.unpaid { background: #f1efe8; color: #5f5e5a; }
+    .student-info { flex: 1; min-width: 0; }
+    .student-name { font-size: 14px; font-weight: 500; color: #1a1a18; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .student-meta { font-size: 11px; color: #888780; margin-top: 2px; }
+    .badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; flex-shrink: 0; }
+    .badge.paid { background: #e1f5ee; color: #0f6e56; }
+    .badge.unpaid { background: #f1efe8; color: #5f5e5a; }
+
+    .spinner-wrap { display: flex; justify-content: center; align-items: center; padding: 2.5rem 0; }
+    .spinner {
+      width: 28px; height: 28px;
+      border: 3px solid #e0dfd8;
+      border-top-color: #1d9e75;
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .empty { text-align: center; color: #888780; font-size: 14px; padding: 2rem 0; }
+    .error-box { margin: 0 1.5rem 1rem; padding: 12px 14px; background: #faece7; border-radius: 8px; font-size: 13px; color: #993c1d; line-height: 1.5; }
+    .footer { text-align: center; font-size: 11px; color: #b4b2a9; padding: 0 1.5rem 1.5rem; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="header">
+    <div class="trip-title">Museo Pumapungo</div>
+    <span class="salon-tag">Aula Cayambe</span>
+    <div class="trip-sub" id="trip-sub">Cargando datos...</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value" id="s-total">—</div></div>
+    <div class="stat-card"><div class="stat-label">Pagaron</div><div class="stat-value green" id="s-paid">—</div></div>
+    <div class="stat-card"><div class="stat-label">Pendientes</div><div class="stat-value red" id="s-unpaid">—</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+    <div class="progress-label" id="prog-label"></div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Buscar estudiante..." oninput="render()" />
+    <button class="filter-btn active" id="btn-all" onclick="setFilter('all')">Todos</button>
+    <button class="filter-btn" id="btn-paid" onclick="setFilter('paid')">Pagaron</button>
+    <button class="filter-btn" id="btn-unpaid" onclick="setFilter('unpaid')">Pendientes</button>
+  </div>
+
+  <div id="error-area"></div>
+  <div class="list" id="list"><div class="spinner-wrap"><div class="spinner"></div></div></div>
+  <div class="footer" id="footer"></div>
+</div>
+<script>
+  var SHEET_ID = "1YTjkg6XGdiqN_F5UphcaKkP_aHTWkseTQEqCYYikirA";
+  var SHEET_GID = "0";
+  var currentFilter = "all";
+
+  function initials(name) {
+    return name.trim().split(/\s+/).slice(0,2).map(function(w){ return w[0]; }).join("").toUpperCase();
+  }
+  function setFilter(f) {
+    currentFilter = f;
+    ["all","paid","unpaid"].forEach(function(x){
+      document.getElementById("btn-"+x).classList.toggle("active", x===f);
+    });
+    render();
+  }
+  function render() {
+    var q = document.getElementById("search").value.toLowerCase();
+    var filtered = allStudents.filter(function(s) {
+      var mf = currentFilter==="all"||(currentFilter==="paid"&&s.paid)||(currentFilter==="unpaid"&&!s.paid);
+      return mf && s.name.toLowerCase().indexOf(q)!==-1;
+    });
+    var list = document.getElementById("list");
+    if (!filtered.length) { list.innerHTML='<div class="empty">No se encontraron estudiantes</div>'; return; }
+    list.innerHTML = filtered.map(function(s) {
+      var meta = s.paid ? [s.date, s.method].filter(Boolean).join(" · ")||"Pago registrado" : "Sin pago aún";
+      return '<div class="student-row">'
+        +'<div class="avatar '+(s.paid?'paid':'unpaid')+'">'+initials(s.name)+'</div>'
+        +'<div class="student-info"><div class="student-name">'+s.name+'</div>'
+        +'<div class="student-meta">'+meta+'</div></div>'
+        +'<span class="badge '+(s.paid?'paid':'unpaid')+'">'+(s.paid?'Pagado':'Pendiente')+'</span>'
+        +'</div>';
+    }).join("");
+  }
+  function updateStats() {
+    var total = allStudents.length;
+    var paid = allStudents.filter(function(s){return s.paid;}).length;
+    var pct = total>0 ? Math.round((paid/total)*100) : 0;
+    document.getElementById("s-total").textContent = total;
+    document.getElementById("s-paid").textContent = paid;
+    document.getElementById("s-unpaid").textContent = total-paid;
+    document.getElementById("prog").style.width = pct+"%";
+    document.getElementById("prog-label").textContent = pct+"% pagado";
+    document.getElementById("trip-sub").textContent = total+" estudiantes registrados";
+    document.getElementById("footer").textContent = "Actualizado: "+
+      new Date().toLocaleDateString("es-EC",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"});
+  }
+  var allStudents = [];
+
+  async function loadData() {
+    try {
+      var res = await fetch("/datos.json");
+      if (!res.ok) throw new Error("http " + res.status);
+      var data = await res.json();
+      allStudents = data.map(function(s) {
+        return {
+          name:   s.nombre  || "",
+          paid:   s.pagado  === true,
+          date:   s.fecha   || "",
+          method: s.metodo  || ""
+        };
+      }).filter(function(s){ return s.name; });
+      updateStats();
+      render();
+    } catch(e) {
+      document.getElementById("error-area").innerHTML =
+        '<div class="error-box">No se pudo cargar los datos.</div>';
+      document.getElementById("list").innerHTML = "";
+    }
+  }
+
+  loadData();
+</script>
+</body>
+</html>
