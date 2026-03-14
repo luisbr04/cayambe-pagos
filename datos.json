@@ -1,5 +1,5 @@
 [
-  {"nombre": "Xavier Abad", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Xavier Abad", "pagado": true, "fecha": "", "metodo": ""},
   {"nombre": "Ana Caridad Ávila", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Alessia Becerra", "pagado": true, "fecha": "13/03/2026", "metodo": "Transferencia"},
   {"nombre": "M. Catalina Chérrez", "pagado": false, "fecha": "", "metodo": ""},
