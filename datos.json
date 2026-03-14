@@ -1,0 +1,20 @@
+[
+  {"nombre": "Xavier Abad", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Ana Caridad Ávila", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Alessia Becerra", "pagado": true, "fecha": "13/03/2026", "metodo": "Transferencia"},
+  {"nombre": "M. Catalina Chérrez", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Lía Corral", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Andrés F. Cuenca", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Arthur De Wilde", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Julián Flores", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Luciana Idrovo", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Enara Jara", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Alonso Marín", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Luis Gabriel Romero", "pagado": true, "fecha": "13/03/2026", "metodo": "Efectivo"},
+  {"nombre": "Nicolás Salinas", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Emanuel Suárez", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Noah Tapia", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Amelia Vanegas", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Martina Zaldúa", "pagado": false, "fecha": "", "metodo": ""}
+]
