@@ -7,7 +7,7 @@
   {"nombre": "Andrés F. Cuenca", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Arthur De Wilde", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Julián Flores", "pagado": false, "fecha": "", "metodo": ""},
-  {"nombre": "Luciana Idrovo", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Luciana Idrovo", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Enara Jara", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Alonso Marín", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
