@@ -16,5 +16,5 @@
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Noah Tapia", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Amelia Vanegas", "pagado": false, "fecha": "", "metodo": ""},
-  {"nombre": "Martina Zaldúa", "pagado": false, "fecha": "", "metodo": ""}
+  {"nombre": "Martina Zaldúa", "pagado": true, "fecha": "13/03/2026", "metodo": "Transferencia"}
 ]
