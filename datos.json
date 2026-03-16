@@ -3,7 +3,7 @@
   {"nombre": "Ana Caridad Ávila", "pagado": true, "fecha": "15/03/2026", "metodo": "Transferencia"},
   {"nombre": "Alessia Becerra", "pagado": true, "fecha": "13/03/2026", "metodo": "Transferencia"},
   {"nombre": "M. Catalina Chérrez", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
-  {"nombre": "Lía Corral", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Lía Corral", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Andrés F. Cuenca", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Arthur De Wilde", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Julián Flores", "pagado": false, "fecha": "", "metodo": ""},
