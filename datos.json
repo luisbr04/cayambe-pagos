@@ -12,7 +12,7 @@
   {"nombre": "Alonso Marín", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Luis Gabriel Romero", "pagado": true, "fecha": "13/03/2026", "metodo": "Efectivo"},
-  {"nombre": "Nicolás Salinas", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Nicolás Salinas", "pagado": true, "fecha": "19/03/2026", "metodo": "Depósito"},
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Noah Tapia", "pagado": true, "fecha": "18/03/2026", "metodo": "Transferencia"},
   {"nombre": "Amelia Vanegas", "pagado": true, "fecha": "18/03/2026", "metodo": "Transferencia"},
