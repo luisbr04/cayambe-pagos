@@ -10,7 +10,7 @@
   {"nombre": "Luciana Idrovo", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
   {"nombre": "Enara Jara", "pagado": true, "fecha": "14/03/2206", "metodo": "Transferencia"},
   {"nombre": "Alonso Marín", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
-  {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Agustín Peñafiel", "pagado": true, "fecha": "19/03/2026", "metodo": "Transferencia"},
   {"nombre": "Luis Gabriel Romero", "pagado": true, "fecha": "13/03/2026", "metodo": "Efectivo"},
   {"nombre": "Nicolás Salinas", "pagado": true, "fecha": "19/03/2026", "metodo": "Depósito"},
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "14/03/2026", "metodo": "Transferencia"},
