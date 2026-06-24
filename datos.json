@@ -1,4 +1,4 @@
-1[
+[
   {"nombre": "Xavier Abad", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Ana Caridad Ávila", "pagado": true, "fecha": "23/06/26", "metodo": "Transferencia"},
   {"nombre": "Alessia Becerra", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
