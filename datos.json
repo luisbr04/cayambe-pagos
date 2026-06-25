@@ -15,5 +15,5 @@
   {"nombre": "Nicolás Salinas", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "24/06/26", "metodo": " Transferencia"},
   {"nombre": "Noah Tapia", "pagado": false, "fecha": "", "metodo": ""},
-  {"nombre": "Amelia Vanegas", "pagado": false, "fecha": "", "metodo": ""}
+  {"nombre": "Amelia Vanegas", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"}
 ]
