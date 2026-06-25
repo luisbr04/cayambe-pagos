@@ -3,8 +3,8 @@
   {"nombre": "Ana Caridad Ávila", "pagado": true, "fecha": "23/06/26", "metodo": "Transferencia"},
   {"nombre": "Alessia Becerra", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
   {"nombre": "M. Catalina Chérrez", "pagado": true, "fecha": "23/06/26", "metodo": "Transferencia"},
-  {"nombre": "Lía Corral", "pagado": false, "fecha": "", "metodo": ""},
-  {"nombre": "Andrés F. Cuenca", "pagado": true, "fecha": "26/06/26", "metodo": "Transferencia"},
+  {"nombre": "Lía Corral", "pagado": true, "fecha": "25/06/26", "metodo": " Transferencia"},
+  {"nombre": "Andrés F. Cuenca", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"},
   {"nombre": "Arthur De Wilde", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Julián Flores", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
   {"nombre": "Luciana Idrovo", "pagado": true, "fecha": "23/06/26", "metodo": "Transferencia"},
@@ -12,8 +12,8 @@
   {"nombre": "Alonso Marín", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
   {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Luis Gabriel Romero", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
-  {"nombre": "Nicolás Salinas", "pagado": true, "fecha": "26/06/26", "metodo": "Transferencia"},
+  {"nombre": "Nicolás Salinas", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"},
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "24/06/26", "metodo": " Transferencia"},
-  {"nombre": "Noah Tapia", "pagado": true, "fecha": "26/06/26", "metodo": "Transferencia"},
+  {"nombre": "Noah Tapia", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"},
   {"nombre": "Amelia Vanegas", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"}
 ]
