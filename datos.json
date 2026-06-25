@@ -6,7 +6,7 @@
   {"nombre": "Lía Corral", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Andrés F. Cuenca", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Arthur De Wilde", "pagado": false, "fecha": "", "metodo": ""},
-  {"nombre": "Julián Flores", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Julián Flores", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
   {"nombre": "Luciana Idrovo", "pagado": true, "fecha": "23/06/26", "metodo": "Transferencia"},
   {"nombre": "Enara Jara", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Alonso Marín", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
