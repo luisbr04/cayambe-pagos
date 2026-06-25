@@ -12,7 +12,7 @@
   {"nombre": "Alonso Marín", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
   {"nombre": "Agustín Peñafiel", "pagado": false, "fecha": "", "metodo": ""},
   {"nombre": "Luis Gabriel Romero", "pagado": true, "fecha": "24/06/26", "metodo": "Efectivo"},
-  {"nombre": "Nicolás Salinas", "pagado": false, "fecha": "", "metodo": ""},
+  {"nombre": "Nicolás Salinas", "pagado": true, "fecha": "26/06/26", "metodo": "Transferencia"},
   {"nombre": "Emanuel Suárez", "pagado": true, "fecha": "24/06/26", "metodo": " Transferencia"},
   {"nombre": "Noah Tapia", "pagado": true, "fecha": "26/06/26", "metodo": "Transferencia"},
   {"nombre": "Amelia Vanegas", "pagado": true, "fecha": "25/06/26", "metodo": "Transferencia"}
